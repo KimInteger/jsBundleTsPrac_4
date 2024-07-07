@@ -1,0 +1,19 @@
+{
+  "name": "jsbundletsprac_4",
+  "version": "1.0.0",
+  "description": "\"하루 한번 개발환경 연습 4일차\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimInteger/jsBundleTsPrac_4.git"
+  },
+  "author": "KimInteger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KimInteger/jsBundleTsPrac_4/issues"
+  },
+  "homepage": "https://github.com/KimInteger/jsBundleTsPrac_4#readme"
+}
