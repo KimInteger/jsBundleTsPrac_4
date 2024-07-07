@@ -2,11 +2,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 
-class customPlugin {
+class CustomPlugin {
   apply(compiler) {
-    compiler.hooks.compilation.tap('customPlugin', (compilation) => {
+    compiler.hooks.compilation.tap('CustomPlugin', (compilation) => {
       HtmlWebpackPlugin.getHooks(compilation).alterAssetTagGroups.tapAsync(
-        'customPlugin',
+        'CustomPlugin',
         (data, cb) => {
           data.headTags = data.headTags.filter(
             (tag) => tag.tagName !== 'script',
@@ -42,8 +42,8 @@ module.exports = {
     filename: 'bundle.js',
   },
   mode: 'development',
-  modules: {
-    rulse: [
+  module: {
+    rules: [
       {
         test: /\.ts$/,
         use: 'babel-loader',
@@ -56,9 +56,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: '.src/index.html',
+      template: './src/index.html',
     }),
-    new customPlugin(),
+    new CustomPlugin(),
   ],
   optimization: {
     minimize: true,
